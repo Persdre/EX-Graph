@@ -1,12 +1,12 @@
 # ETGraph
-Open data and source code of ETGraph dataset
+Data and source code of ETGraph dataset.
 
-Data is in the Google Drive for the big size, links are below:
-- On-chain data: 
-- Off-chain data: 
-- Matching data: 
+Data is in the Google Drive for the big size, links are shown below:
+1. On-chain data: 
+2. Off-chain data: 
+3. Matching data: 
 
-This repository contains the following three folders:
-1. Ethereum link prediction code
-2. Wash trading addresses detection code
-3. Matching link prediction code
+This repository contains the following three code folders:
+1. Ethereum link prediction
+2. Wash trading address detection
+3. Matching link prediction
