@@ -10,3 +10,5 @@ This repository contains the following three code folders:
 1. Ethereum link prediction
 2. Wash trading address detection
 3. Matching link prediction
+
+This dataset is under license CC BY-NC-SA.
