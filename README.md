@@ -16,10 +16,15 @@ Due to the large size of the dataset, it has been uploaded to Google Drive for e
 - Encoded graphs for matching link prediction:
 
 
-This repository contains three code folders and one cleaned data folder:
+This repository contains three code folders and two data files. The folders are organized as follows:
+
 1. Ethereum link prediction
 2. Wash trading address detection
 3. Matching link prediction
-4. Cleaned data
+
+The data files included in this repository are:
+
+1. Twitter handles with their matching Ethereum addresses (before anonymization for review; the formal version will be anonymized)
+2. Wash-trading records from Dune (before anonymization for review; the formal version will be anonymized)
 
 This dataset is under license CC BY-NC-SA.
