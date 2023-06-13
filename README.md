@@ -15,7 +15,7 @@ Due to the large size of the dataset, it has been uploaded to Google Drive for e
   Test graph: https://drive.google.com/file/d/1JgoBdaD2e3wlvZmT-GPEpwEiFwtrPwSB/view?usp=sharing
 - Off-chain Twitter data in DGL graph format:
 
-  
+  https://drive.google.com/file/d/1SNOg3QYoVWFRIl91o0tCeA4dReKwtEa0/view?usp=sharing
 
 
 This repository contains three code folders and two key data files. The folders are organized as follows:
