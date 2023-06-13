@@ -1,7 +1,7 @@
 # ETGraph
 Data and source code of ETGraph dataset.
 
-Data is in the Google Drive for the big size.
+Due to the large size of the dataset, it has been uploaded to Google Drive for easy access and downloading.
 
 On-chain data:
 - Encoded graphs for Ethereum link prediction: https://drive.google.com/file/d/1lY2IC3LeRevSPZCE2U9o8taunGLEV0oY/view?usp=sharing 
