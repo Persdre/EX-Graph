@@ -27,7 +27,7 @@ This repository contains three code folders and two key data files. The folders 
 
 The data files included in this repository are:
 
-1. Twitter handles with their matching Ethereum addresses from OpenSea. (This is for the review. Formal version will not contain it as the information is already contained in the off-chain Twitter data in DGL graph format without leaking any personal information.)
+1. Twitter handles (converted to numerical id for anonymization) with their matching Ethereum addresses from OpenSea. 
 2. Wash-trading transaction records collected from Dune.
 
 This dataset is under license CC BY-NC-SA.
