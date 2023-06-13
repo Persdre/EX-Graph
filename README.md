@@ -3,7 +3,7 @@ Data and source code of ETGraph dataset.
 
 Due to the large size of the dataset, it has been uploaded to Google Drive for easy access and downloading.
 
-- On-chain Ethereum transaction data in DGL graph format:
+- On-chain Ethereum transaction data in DGL graph format (also for Ethereum link prediction):
   
   https://drive.google.com/file/d/1lY2IC3LeRevSPZCE2U9o8taunGLEV0oY/view?usp=sharing 
 - DGL graphs for wash-trading Ethereum addresses detection:
@@ -13,7 +13,7 @@ Due to the large size of the dataset, it has been uploaded to Google Drive for e
   Validation graph: https://drive.google.com/file/d/1Qk1unpx0D66STS8GLjQNEsrOqngNQtSy/view?usp=sharing
 
   Test graph: https://drive.google.com/file/d/1JgoBdaD2e3wlvZmT-GPEpwEiFwtrPwSB/view?usp=sharing
-- Off-chain Twitter data in DGL graph format:
+- Off-chain Twitter following-followers data in DGL graph format (also for matching link prediction):
 
   https://drive.google.com/file/d/1SNOg3QYoVWFRIl91o0tCeA4dReKwtEa0/view?usp=sharing
 
