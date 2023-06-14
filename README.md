@@ -10,15 +10,15 @@ Due to the large size of the dataset, it has been uploaded to Google Drive for e
 
   Training graph without Twitter data: https://drive.google.com/file/d/14gW0EovXYiXd62XJayGGYRBEeZ3TTU4i/view?usp=sharing
 
-  Training graph with Twitter data: 
+  Training graph with Twitter data: https://drive.google.com/file/d/1Na3SmGzpo8zycQtTCtOQIWh_yJPOcwck/view?usp=sharing
 
   Validation graph without Twitter data: https://drive.google.com/file/d/1Qk1unpx0D66STS8GLjQNEsrOqngNQtSy/view?usp=sharing
 
-  Validation graph with Twitter data:
+  Validation graph with Twitter data: https://drive.google.com/file/d/1lBJt62hGL5E9W87LytqhOBohGxqJNds8/view?usp=sharing
 
   Test graph without Twitter data: https://drive.google.com/file/d/1JgoBdaD2e3wlvZmT-GPEpwEiFwtrPwSB/view?usp=sharing
 
-  Test graph with Twitter data:
+  Test graph with Twitter data: https://drive.google.com/file/d/12F1P98oQNjh-gvUaoviPvfS_FLb4Xtpx/view?usp=sharing
 - Off-chain Twitter data in DGL graph format (also for matching link prediction):
 
   https://drive.google.com/file/d/1SNOg3QYoVWFRIl91o0tCeA4dReKwtEa0/view?usp=sharing
