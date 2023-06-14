@@ -8,18 +8,18 @@ Due to the large size of the dataset, it has been uploaded to Google Drive for e
   https://drive.google.com/file/d/1lY2IC3LeRevSPZCE2U9o8taunGLEV0oY/view?usp=sharing 
 - DGL graphs for wash-trading Ethereum addresses detection:
 
-  Training graph without Twitter information: https://drive.google.com/file/d/14gW0EovXYiXd62XJayGGYRBEeZ3TTU4i/view?usp=sharing
+  Training graph without Twitter data: https://drive.google.com/file/d/14gW0EovXYiXd62XJayGGYRBEeZ3TTU4i/view?usp=sharing
 
-  Training graph with Twitter information: 
+  Training graph with Twitter data: 
 
-  Validation graph without Twitter information: https://drive.google.com/file/d/1Qk1unpx0D66STS8GLjQNEsrOqngNQtSy/view?usp=sharing
+  Validation graph without Twitter data: https://drive.google.com/file/d/1Qk1unpx0D66STS8GLjQNEsrOqngNQtSy/view?usp=sharing
 
-  Validation graph with Twitter information:
+  Validation graph with Twitter data:
 
-  Test graph without Twitter information: https://drive.google.com/file/d/1JgoBdaD2e3wlvZmT-GPEpwEiFwtrPwSB/view?usp=sharing
+  Test graph without Twitter data: https://drive.google.com/file/d/1JgoBdaD2e3wlvZmT-GPEpwEiFwtrPwSB/view?usp=sharing
 
-  Test graph with Twitter information:
-- Off-chain Twitter following-followers data in DGL graph format (also for matching link prediction):
+  Test graph with Twitter data:
+- Off-chain Twitter data in DGL graph format (also for matching link prediction):
 
   https://drive.google.com/file/d/1SNOg3QYoVWFRIl91o0tCeA4dReKwtEa0/view?usp=sharing
 
