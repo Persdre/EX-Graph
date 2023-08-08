@@ -6,6 +6,7 @@ ETGraph is a rich dataset containing on-chain Ethereum transaction data and off-
 - [Downloading the Dataset](#downloading-the-dataset)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
+  - [Requirements](#requirements)
   - [Data Loading](#data-loading)
 - [Detailed Structure and Usage](#detailed-structure-and-usage)
   - [Ethereum Link Prediction](#ethereum-link-prediction)
@@ -35,11 +36,20 @@ Due to the large size of the dataset, it has been uploaded to Google Drive for c
 
 ## Getting Started
 ### Installation
-First, you need to install the required dependencies. You can install them using:
+Download this repository and extract the contents to a desired location.
 
-```bash
-pip install -r requirements.txt
-```
+### Requirements
+ETGraph depends on the following:
+
+- networkx>=2.8.3
+- numpy>=1.22.3
+- outdated>=0.2.1
+- pandas>=1.4.2
+- patool>=1.12
+- requests>=2.27.1
+- setuptools>=60.2.0
+- torch>=1.11.0
+- torch_scatter>=2.0.9
 
 ``### Dataset Loading
 
