@@ -36,22 +36,14 @@ Due to the large size of the dataset, it has been uploaded to Google Drive for c
 
 ## Getting Started
 ### Installation
-Download this repository and extract the contents to a desired location.
 
-### Requirements
-ETGraph depends on the following:
+1. **Download this repository** and extract the contents to a desired location.
+2. **Create a Conda environment** using the provided `environment.yml` file. Open a terminal and navigate to the directory containing `environment.yml`, then run:
 
-- networkx>=2.8.3
-- numpy>=1.22.3
-- outdated>=0.2.1
-- pandas>=1.4.2
-- patool>=1.12
-- requests>=2.27.1
-- setuptools>=60.2.0
-- torch>=1.11.0
-- torch_scatter>=2.0.9
-
-``### Dataset Loading
+   ```
+   conda env create -f environment.yml
+   ```
+### Dataset Loading
 
 ```
 import dgl
