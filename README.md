@@ -58,15 +58,6 @@ Due to the large size of the dataset, it has been uploaded to Google Drive for c
 We list main requirements of this repository below. For full requirements, please refer to the provided `environment.yml` file
 
 - dgl==1.1.0
-- huggingface-hub==0.15.1
-- lightgbm==3.3.5
-- matplotlib==3.7.1
-- numpy==1.24.2
-- pandas==2.0.0
-- pillow==9.5.0
-- requests==2.28.1
-- scikit-learn==1.2.2
-- scipy==1.10.1
 - torch==2.0.0+cu117
 - torch-cluster==1.6.1+pt20cu117
 - torch-geometric==2.3.0
