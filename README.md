@@ -9,11 +9,10 @@ ETGraph is a rich dataset containing on-chain Ethereum transaction data and off-
   - [Installation](#installation)
   - [Requirements](#requirements)
   - [Data Loading](#data-loading)
-- [Detailed Structure and Usage](#detailed-structure-and-usage)
+- [Using ETGraph](#Using-ETGraph)
   - [Ethereum Link Prediction](#ethereum-link-prediction)
   - [Wash Trading Address Detection](#wash-trading-address-detection)
   - [Matching Link Prediction](#matching-link-prediction)
-- [Tasks and Benchmarks](#tasks-and-benchmarks)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -38,9 +37,9 @@ Due to the large size of the dataset, it has been uploaded to Google Drive for c
 ## Dataset Schema
 | Dataset                                         | Nodes            | Edges            | Node Features                        | Edge Features                              |
 |------------------------------------------------|------------------|------------------|-------------------------------------|--------------------------------------------|
-| Twitter Graph                                  | <number of nodes>| <number of edges>| twitter_handle                      | <edge features>                            |
+| Twitter Graph                                  | <number of nodes>| <number of edges>| twitter_handle                      | n.a.                            |
 | Ethereum Graph                                 | <number of nodes>| <number of edges>| <node features>                     | from_id, to_id, weight, block_number       |
-| Ethereum Graph with Twitter features           | <number of nodes>| <number of edges>| twitter_features, ethereum_features | combined_features                          |
+| Ethereum Graph with Twitter features           | <number of nodes>| <number of edges>| twitter_features, ethereum_features, combined_features | n.a.                          |
 
 
 ## Getting Started
@@ -77,16 +76,17 @@ import pickle as pkl
 graph = dgl.load_graphs("G_dgl.pkl")
 ```
 
-## Detailed Structure and Usage
+## Using ETGraph
 
-This section outlines the structure of the dataset and its application in various domains:
+This section details how to using ETGraph to run benchmark baselines. We explain experiments Ethereum link prediction, wash-trading addresses detection, matching link prediction one by one.
 
-Ethereum Link Prediction: Explain how the dataset supports Ethereum link prediction tasks, including the features used, problem formulation, and potential methods to apply.
-Wash Trading Address Detection: Detail the structure and features relevant for detecting wash trading addresses, and provide guidance on how to utilize this part of the dataset.
-Matching Link Prediction: Describe how matching link prediction can be performed using the dataset, including the methodologies that can be employed and the expected outcomes.
+### Ethereum Link Prediction
+1. navigate to ethereum_link_prediction folder, and download 
 
+### Wash-trading Addresses Detection
 
-## Tasks and Benchmarks
+### Matching Link Prediction
+
 
 ## Contributing
 
