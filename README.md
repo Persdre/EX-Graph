@@ -36,13 +36,12 @@ Due to the large size of the dataset, it has been uploaded to Google Drive for c
 - [Off-chain Twitter data in DGL graph format](https://drive.google.com/file/d/1SNOg3QYoVWFRIl91o0tCeA4dReKwtEa0/view?usp=sharing)
 
 ## Dataset Schema
-| Dataset                                                                                          | Features                                                                                   |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-|            |                |
-|                    |                                                                                      |
-|                      |                                                                                       |
-|                                    |                                                                                  |
-|                        |                                                             |
+| Dataset                                         | Nodes            | Edges            | Node Features                        | Edge Features                              |
+|------------------------------------------------|------------------|------------------|-------------------------------------|--------------------------------------------|
+| Twitter Graph                                  | <number of nodes>| <number of edges>| twitter_handle                      | <edge features>                            |
+| Ethereum Graph                                 | <number of nodes>| <number of edges>| <node features>                     | from_id, to_id, weight, block_number       |
+| Ethereum Graph with Twitter features           | <number of nodes>| <number of edges>| twitter_features, ethereum_features | combined_features                          |
+
 
 ## Getting Started
 ### Installation
