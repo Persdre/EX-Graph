@@ -1,5 +1,5 @@
 # ETGraph
-ETGraph is a rich dataset containing on-chain Ethereum transaction data and off-chain Twitter data in DGL graph format. It's aimed at various tasks such as Ethereum link prediction, wash-trading address detection, and matching link prediction.
+ETGraph is a rich dataset containing on-chain Ethereum transaction data and off-chain Twitter data in DGL graph format. With a focus on bridging the gap between anonymous on-chain activities and identifiable off-chain information, it's specifically designed to facilitate various tasks. These include Ethereum link prediction, wash-trading address detection, and matching link prediction between Ethereum addresses and Twitter accounts. By integrating these two different dimensions, ETGraph provides a comprehensive resource for researchers and analysts to explore the complex relationships within the cryptocurrency landscape.
 
 ## Table of Contents
 - [Dataset Overview](#dataset-overview)
