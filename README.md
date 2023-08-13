@@ -13,7 +13,6 @@ ETGraph is a rich dataset containing on-chain Ethereum transaction data and off-
   - [Ethereum Link Prediction](#ethereum-link-prediction)
   - [Wash Trading Address Detection](#wash-trading-address-detection)
   - [Matching Link Prediction](#matching-link-prediction)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Dataset Overview
@@ -81,14 +80,23 @@ graph = dgl.load_graphs("G_dgl.pkl")
 This section details how to using ETGraph to run benchmark baselines. We explain experiments Ethereum link prediction, wash-trading addresses detection, matching link prediction one by one.
 
 ### Ethereum Link Prediction
-1. navigate to ethereum_link_prediction folder, and download 
-
-### Wash-trading Addresses Detection
-
+1. Navigate to ethereum_link_prediction folder, and download the Ethereum graph to this folder. 
+2. Each model is named as model_wo/with_twitter.py. For example, if you want to run GCN model considering Twitter features, the command is as below:
+``` 
+python GCN_with_twitter.py
+```
+### Wash-trading Address Detection
+1. Navigate to wash_trading_address_detection folder, and download the wash trading graph to this folder. 
+2. Each model is named as model_wo/with_twitter.py. For example, if you want to run GCN model considering Twitter features, the command is as below:
+``` 
+python GCN_with_twitter.py
+```
 ### Matching Link Prediction
-
-
-## Contributing
+1. Navigate to matching_link_prediction folder, and download the matching link graph to this folder. 
+2. Each model is named as model.py. For example, if you want to run GCN model on this matching link prediction, the command is as below:
+``` 
+python GCN.py
+```
 
 ## License
 This dataset is under license CC BY-NC-SA.
