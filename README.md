@@ -70,6 +70,7 @@ We list main requirements of this repository below. For full requirements, pleas
 ### Data Loading
 
 We suppose that you have downloaded the datasets to the corresponding task's folders. Then, you can use the following command to load the data in the pkl format.
+
 ```
 import dgl
 import pickle as pkl
@@ -83,23 +84,26 @@ This section details how to using ETGraph to run benchmark baselines. We explain
 ### Ethereum Link Prediction
 1. Navigate to ethereum_link_prediction folder, and download the Ethereum graph to this folder. 
 2. Each experiment code file is named as model_wo/with_twitter.py. wo means this experiment does not consider Twitter features. with means this experiment considers Twitter features. For example, if you want to run clusterGCN model considering Twitter features, the command is as below:
-``` 
-python clusterGCN_with_twitter.py
-```
+
+    ``` 
+    python clusterGCN_with_twitter.py
+    ```
 
 ### Wash-trading Address Detection
 1. Navigate to wash_trading_address_detection folder, and download the wash trading graph to this folder. 
 2. Each experiment code file is named as model_wo/with_twitter.py. wo means this experiment does not consider Twitter features. with means this experiment considers Twitter features. For example, if you want to run GCN model considering Twitter features, the command is as below:
-``` 
-python GCN_with_twitter.py
-```
+  
+    ``` 
+    python GCN_with_twitter.py
+    ```
 
 ### Matching Link Prediction
 1. Navigate to matching_link_prediction folder, and download the matching link graph to this folder. 
 2. Each experiment code file is named as model.py. wo means this experiment does not consider Twitter features. with means this experiment considers Twitter features. For example, if you want to run GCN model on this matching link prediction, the command is as below:
-``` 
-python GCN.py
-```
+   
+    ``` 
+    python GCN.py
+    ```
 
 ## License
 This dataset is under license CC BY-NC-SA.
