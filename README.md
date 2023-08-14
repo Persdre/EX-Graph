@@ -41,6 +41,7 @@ Due to the large size of the dataset, it has been uploaded to Google Drive for c
 | Ethereum Graph with Twitter features           | <number of nodes>| <number of edges>| twitter_features, ethereum_features, combined_features | n.a.                          |
 
 
+
 ## Getting Started
 ### Installation
 
@@ -81,19 +82,21 @@ This section details how to using ETGraph to run benchmark baselines. We explain
 
 ### Ethereum Link Prediction
 1. Navigate to ethereum_link_prediction folder, and download the Ethereum graph to this folder. 
-2. Each model is named as model_wo/with_twitter.py. For example, if you want to run GCN model considering Twitter features, the command is as below:
+2. Each experiment code file is named as model_wo/with_twitter.py. wo means this experiment does not consider Twitter features. with means this experiment considers Twitter features. For example, if you want to run clusterGCN model considering Twitter features, the command is as below:
 ``` 
-python GCN_with_twitter.py
+python clusterGCN_with_twitter.py
 ```
+
 ### Wash-trading Address Detection
 1. Navigate to wash_trading_address_detection folder, and download the wash trading graph to this folder. 
-2. Each model is named as model_wo/with_twitter.py. For example, if you want to run GCN model considering Twitter features, the command is as below:
+2. Each experiment code file is named as model_wo/with_twitter.py. wo means this experiment does not consider Twitter features. with means this experiment considers Twitter features. For example, if you want to run GCN model considering Twitter features, the command is as below:
 ``` 
 python GCN_with_twitter.py
 ```
+
 ### Matching Link Prediction
 1. Navigate to matching_link_prediction folder, and download the matching link graph to this folder. 
-2. Each model is named as model.py. For example, if you want to run GCN model on this matching link prediction, the command is as below:
+2. Each experiment code file is named as model.py. wo means this experiment does not consider Twitter features. with means this experiment considers Twitter features. For example, if you want to run GCN model on this matching link prediction, the command is as below:
 ``` 
 python GCN.py
 ```
