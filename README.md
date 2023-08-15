@@ -36,10 +36,10 @@ Due to the large size of the dataset, it has been uploaded to Google Drive for c
 ## Dataset Schema
 | Dataset                                         | Nodes            | Edges            | Node Features                        | Edge Features                              |
 |------------------------------------------------|------------------|------------------|-------------------------------------|--------------------------------------------|
-| Twitter Graph                                  | <number of nodes>| <number of edges>| twitter_handle                      | n.a.                            |
+| Twitter Graph                                  | <number of nodes>| <number of edges>| twitter_handle, twitter_semantic_features                      | n.a.                            |
 | Ethereum Graph                                 | <number of nodes>| <number of edges>| <node features>                     | from_id, to_id, weight, block_number       |
-| Ethereum Graph with Twitter features           | <number of nodes>| <number of edges>| twitter_features, ethereum_features, combined_features | n.a.                          |
-
+| Ethereum Graph with Twitter features           | <number of nodes>| <number of edges>| twitter_features, ethereum_features, combined_features | from_id, to_id, weight, block_number                          |
+| Wash-trading Addresses Detection Graph           | <number of nodes>| <number of edges>| ethereum_features, twitter_semantic_features, twitter_structure_features, ethereum_twitter_combined_features | from_id, to_id, weight, block_number                          |
 
 
 ## Getting Started
