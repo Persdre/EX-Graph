@@ -21,9 +21,17 @@ ETGraph dataset consists of several components:
 - **On-chain Ethereum Transaction Data**: Structured data in DGL graph format representing the Ethereum transactions.
 - **Off-chain Twitter Data**: Complementary data from Twitter to provide additional insights.
 - **Various Training, Validation, and Test Graphs**: Separated datasets for different tasks including wash trading address detection and link prediction.
+- **Twitter-matching.csv**: Twitter accounts and the Ethereum addresses matched with them.
+- **dune_wash_trade_tx.csv**: Wash-trading records collected from Dune.
 
 ## Downloading the Dataset
-Due to the large size of the dataset, it has been uploaded to Google Drive for convenient downloading. Links for each part of the dataset are provided below:
+
+`twitter_matching.csv` and `dune_wash_trade_tx.csv` are in the repository. Due to the large size of other datasets, they have been uploaded to Google Drive for convenient downloading. Links for each part of the dataset are provided below:
+
+- Twitter graph
+- Ethereum graph
+- Ethereum graph with Twitter features
+- Wash-trading Addresses detection graph
 
 - [On-chain Ethereum transaction data](https://drive.google.com/file/d/1lY2IC3LeRevSPZCE2U9o8taunGLEV0oY/view?usp=sharing)
 - [DGL graphs for wash-trading Ethereum addresses detection](https://drive.google.com/file/d/14gW0EovXYiXd62XJayGGYRBEeZ3TTU4i/view?usp=sharing)
@@ -76,6 +84,7 @@ import dgl
 import pickle as pkl
 graph = dgl.load_graphs("G_dgl.pkl")
 ```
+
 
 ## Using ETGraph
 
