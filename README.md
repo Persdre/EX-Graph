@@ -24,7 +24,7 @@ ETGraph dataset consists of several components:
 - Wash-trading Addresses detection graph
 - `ethreum_link_prediction`: Folder contains code of models to run Ethereum link prediction experiment.
 - `wash_trading_address_detection`: Folder contains code of models to run wash trading address detection experiment.
-- `matching_link_prediction`: Folder contains code of models to run matching link prediction experiment.
+- `matching_link_prediction`: Folder contains models to run matching link prediction experiment and train, validation, test edge indices pickle files.
 - `twitter_matching.csv`: Twitter accounts and the Ethereum addresses matched with them. We did anonymization operations so that you can see the twitter numerical id matching with Ethereum addresses without leaking any personal information.
 - `dune_wash_trade_tx.csv`: Wash-trading transactions downloaded from Dune.
 
