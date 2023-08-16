@@ -18,11 +18,15 @@ ETGraph is a rich dataset containing on-chain Ethereum transaction data and off-
 ## Dataset Overview
 ETGraph dataset consists of several components:
 
-- **On-chain Ethereum Transaction Data**: Structured data in DGL graph format representing the Ethereum transactions.
-- **Off-chain Twitter Data**: Complementary data from Twitter to provide additional insights.
-- **Various Training, Validation, and Test Graphs**: Separated datasets for different tasks including wash trading address detection and link prediction.
-- **Twitter-matching.csv**: Twitter accounts and the Ethereum addresses matched with them.
-- **dune_wash_trade_tx.csv**: Wash-trading records collected from Dune.
+- Twitter graph
+- Ethereum graph
+- Ethereum graph with Twitter features
+- Wash-trading Addresses detection graph
+- `ethreum_link_prediction`: Folder contains code of models to run Ethereum link prediction experiment.
+- `wash_trading_address_detection`: Folder contains code of models to run wash trading address detection experiment.
+- `matching_link_prediction`: Folder contains code of models to run matching link prediction experiment.
+- `twitter_matching.csv`: Twitter accounts and the Ethereum addresses matched with them. We did anonymization operations so that you can see the twitter numerical id matching with Ethereum addresses without leaking any personal information.
+- `dune_wash_trade_tx.csv`: Wash-trading transactions downloaded from Dune.
 
 ## Downloading the Dataset
 
@@ -42,7 +46,7 @@ ETGraph dataset consists of several components:
 - [Off-chain Twitter data in DGL graph format](https://drive.google.com/file/d/1SNOg3QYoVWFRIl91o0tCeA4dReKwtEa0/view?usp=sharing)
 
 ## Dataset Schema
-| Dataset                                         | Nodes            | Edges            | Node Features                        | Edge Features                              |
+| Dataset                                         | #Nodes            | #Edges            | Node Features                        | Edge Features                              |
 |------------------------------------------------|------------------|------------------|-------------------------------------|--------------------------------------------|
 | Twitter Graph                                  | <number of nodes>| <number of edges>| twitter_handle, twitter_semantic_features                      | n.a.                            |
 | Ethereum Graph                                 | <number of nodes>| <number of edges>| <node features>                     | from_id, to_id, weight, block_number       |
