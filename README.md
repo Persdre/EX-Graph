@@ -8,7 +8,7 @@ ETGraph is a rich dataset containing on-chain Ethereum transaction data and off-
 - [Getting Started](#getting-started)
   - [Installation](#installation)
   - [Requirements](#requirements)
-  - [Data Loading](#data-loading)
+  - [Dataset Loading](#dataset-loading)
 - [Using ETGraph](#Using-ETGraph)
   - [Ethereum Link Prediction](#ethereum-link-prediction)
   - [Wash Trading Address Detection](#wash-trading-address-detection)
@@ -75,14 +75,15 @@ We list main requirements of this repository below. For full requirements, pleas
 - torchvision==0.15.1+cu117
 - transformers==4.30.2
 
-### Data Loading
+### Dataset Loading
 
 We suppose that you have downloaded the datasets to the corresponding task's folders. Then, you can use the following command to load the data in the pkl format.
 
 ```
 import dgl
 import pickle as pkl
-graph = dgl.load_graphs("G_dgl.pkl")
+with open('G_dgl_with_twitter_features_converted.pkl', 'rb') as f:
+    G_dgl_with_twitter_features_converted = pkl.load(f)
 ```
 
 
@@ -91,8 +92,8 @@ graph = dgl.load_graphs("G_dgl.pkl")
 This section details how to using ETGraph to run benchmark baselines. We explain experiments Ethereum link prediction, wash-trading addresses detection, matching link prediction one by one.
 
 ### Ethereum Link Prediction
-1. Navigate to ethereum_link_prediction folder, and download the Ethereum graph to this folder. 
-2. Each experiment code file is named as model_wo/with_twitter.py. wo means this experiment does not consider Twitter features. with means this experiment considers Twitter features. For example, if you want to run clusterGCN model considering Twitter features, the command is as below:
+1. Navigate to ethereum_link_prediction folder, and download the Ethereum graph with Twitter features to this folder. 
+2. Each experiment code file is named as `model_wo/with_twitter.py`. `wo` means this experiment does not consider Twitter features. `with` means this experiment considers Twitter features. For example, if you want to run clusterGCN model considering Twitter features in Ethereum link prediction, the command is as below:
 
     ``` 
     python clusterGCN_with_twitter.py
@@ -100,7 +101,7 @@ This section details how to using ETGraph to run benchmark baselines. We explain
 
 ### Wash-trading Address Detection
 1. Navigate to wash_trading_address_detection folder, and download the wash trading graph to this folder. 
-2. Each experiment code file is named as model_wo/with_twitter.py. wo means this experiment does not consider Twitter features. with means this experiment considers Twitter features. For example, if you want to run GCN model considering Twitter features, the command is as below:
+2. Each experiment code file is named as `model_wo/with_twitter.py`. `wo` means this experiment does not consider Twitter features. `with` means this experiment considers Twitter features. For example, if you want to run GCN model considering Twitter features, the command is as below:
   
     ``` 
     python GCN_with_twitter.py
@@ -108,7 +109,7 @@ This section details how to using ETGraph to run benchmark baselines. We explain
 
 ### Matching Link Prediction
 1. Navigate to matching_link_prediction folder, and download the matching link graph to this folder. 
-2. Each experiment code file is named as model.py. wo means this experiment does not consider Twitter features. with means this experiment considers Twitter features. For example, if you want to run GCN model on this matching link prediction, the command is as below:
+2. Each experiment code file is named as `model.py`. For example, if you want to run GCN model on this matching link prediction, the command is as below:
    
     ``` 
     python GCN.py
