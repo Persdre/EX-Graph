@@ -18,10 +18,10 @@ ETGraph is a rich dataset containing on-chain Ethereum transaction data and off-
 ## Dataset Overview
 ETGraph dataset consists of several components:
 
-- Twitter graph
-- Ethereum graph
-- Ethereum graph with Twitter features
-- Wash-trading Addresses detection graph
+- `Twitter graph`: Twitter accounts and their following relationships.
+- `Ethereum graph`: Ethereum addresses and their transaction records.
+- `Ethereum graph with Twitter features`: DGL graph contains Ethereum addresses and their transaction records, as well as Ethereum addresses features got from both Ethereum and Twitter.
+- `Wash-trading Addresses detection graph`: DGL graph used for wash-trading address detection.
 - `ethreum_link_prediction`: Folder contains code of models to run Ethereum link prediction experiment.
 - `wash_trading_address_detection`: Folder contains code of models to run wash trading address detection experiment.
 - `matching_link_prediction`: Folder contains models to run matching link prediction experiment and train, validation, test edge indices pickle files.
