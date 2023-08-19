@@ -1,6 +1,8 @@
 # ETGraph
 ETGraph is a rich dataset containing Ethereum transaction data and Twitter data. With a focus on bridging the gap between anonymous Ethereum activities and identifiable Twitter information, it's specifically designed to facilitate various tasks including Ethereum link prediction, wash-trading addressese detection, and matching link prediction between Ethereum addresses and Twitter accounts. By integrating these two different dimensions, ETGraph provides a comprehensive resource for researchers and analysts to explore the complex relationships within the Ethereum landscape.
 
+Also, we deploy our ETGraph dataset to a website, where you can upload your results to the leaderboard: https://etgraph.deno.dev/
+
 ## Table of Contents
 - [Dataset Overview](#dataset-overview)
 - [Dataset Schema](#dataset-schema)
@@ -37,7 +39,7 @@ We present the original datasets and datasets tailored for use in three distinct
 |------------------------------------------------|------------------|------------------|-------------------------------------|--------------------------------------------|
 | [Twitter Graph](https://drive.google.com/file/d/1n3lFNCsl-6O_ew9tD9HUic-ld4j2QxeX/view?usp=sharing)                                  | 1,103,509|3,768,281| n.a.                      | n.a.                            |
 | Ethereum Graph                                 | 2,610,465| 29,585,858| n.a.                     | from_id, to_id, weight, block_number       |
-| [Ethereum Graph with Twitter features](https://drive.google.com/file/d/1q3KX_b3M2wImFvFMP-15CcPKdVOeuSw-/view?usp=sharing)           |1,709,575 |13,170,869 | twitter_features, ethereum_features, ethereum_twitter_combined_feature | from_id, to_id, weight, block_number                          |
+| [Ethereum Graph with Twitter features](https://drive.google.com/file/d/1q3KX_b3M2wImFvFMP-15CcPKdVOeuSw-/view?usp=sharing)           |1,709,575 |13,170,869 | twitter_features, ethereum_features, ethereum_twitter_combined_features | from_id, to_id, weight, block_number                          |
 | Wash-trading Addresses Detection Training Graph           | 1,268,607| 8,276,446| ethereum_features, twitter_semantic_features, twitter_structure_features, ethereum_twitter_combined_features, wash_trading_label | n.a.                          |
 | Wash-trading Addresses Detection Validation Graph           | 452,930| 1,182,349| ethereum_features, twitter_semantic_features, twitter_structure_features, ethereum_twitter_combined_features, wash_trading_label | n.a.                         |
 | Wash-trading Addresses Detection Test Graph           | 711,084| 2,364,700| ethereum_features, twitter_semantic_features, twitter_structure_features, ethereum_twitter_combined_features, wash_trading_label | n.a.                          |
