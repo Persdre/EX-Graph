@@ -1,15 +1,14 @@
 # ETGraph
-ETGraph is a rich dataset containing on-chain Ethereum transaction data and off-chain Twitter data in DGL graph format. With a focus on bridging the gap between anonymous on-chain activities and identifiable off-chain information, it's specifically designed to facilitate various tasks. These include Ethereum link prediction, wash-trading address detection, and matching link prediction between Ethereum addresses and Twitter accounts. By integrating these two different dimensions, ETGraph provides a comprehensive resource for researchers and analysts to explore the complex relationships within the cryptocurrency landscape.
+ETGraph is a rich dataset containing Ethereum transaction data and Twitter data. With a focus on bridging the gap between anonymous Ethereum activities and identifiable Twitter information, it's specifically designed to facilitate various tasks including Ethereum link prediction, wash-trading addressese detection, and matching link prediction between Ethereum addresses and Twitter accounts. By integrating these two different dimensions, ETGraph provides a comprehensive resource for researchers and analysts to explore the complex relationships within the Ethereum landscape.
 
 ## Table of Contents
 - [Dataset Overview](#dataset-overview)
-- [Downloading the Dataset](#downloading-the-dataset)
 - [Dataset Schema](#dataset-schema)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
   - [Requirements](#requirements)
   - [Dataset Loading](#dataset-loading)
-- [Using ETGraph](#Using-ETGraph)
+- [Using ETGraph](#using-etgraph)
   - [Ethereum Link Prediction](#ethereum-link-prediction)
   - [Wash Trading Address Detection](#wash-trading-address-detection)
   - [Matching Link Prediction](#matching-link-prediction)
@@ -18,40 +17,31 @@ ETGraph is a rich dataset containing on-chain Ethereum transaction data and off-
 ## Dataset Overview
 ETGraph dataset consists of several components:
 
-- `Twitter graph`: Twitter accounts and their following relationships.
-- `Ethereum graph`: Ethereum addresses and their transaction records.
-- `Ethereum graph with Twitter features`: DGL graph contains Ethereum addresses and their transaction records, as well as Ethereum addresses features got from both Ethereum and Twitter.
-- `Wash-trading Addresses detection graph`: DGL graph used for wash-trading address detection.
-- `ethreum_link_prediction`: Folder contains code of models to run Ethereum link prediction experiment.
+- `Twitter Graph`: Twitter accounts and their following relationships.
+- `Ethereum Graph`: Ethereum addresses and their transaction records.
+- `Ethereum Graph with Twitter features`: A DGL graph contains Ethereum addresses and their transaction records, as well as Ethereum addresses features got from both Ethereum and matched-Twitter accounts, it is used for Ethereum link prediction task.
+- `Wash-trading Addresses Detection Training Graph`: Training graph used for wash-trading addresses detection task.
+- `Wash-trading Addresses Detection Validation Graph`: Validation graph used for wash-trading addresses detection task.
+- `Wash-trading Addresses Detection Test Graph`: Test graph used for wash-trading addresses detection task.
+- `Matching Link Prediction Graph`: DGL graph used for matching link prediction task.
+- `ethreum_link_prediction`: Folder contains models to run Ethereum link prediction experiment and train, validation, test edge indices pickle files.
 - `wash_trading_address_detection`: Folder contains code of models to run wash trading address detection experiment.
 - `matching_link_prediction`: Folder contains models to run matching link prediction experiment and train, validation, test edge indices pickle files.
 - `twitter_matching.csv`: Twitter accounts and the Ethereum addresses matched with them. We did anonymization operations so that you can see the twitter numerical id matching with Ethereum addresses without leaking any personal information.
 - `dune_wash_trade_tx.csv`: Wash-trading transactions downloaded from Dune.
 
-## Downloading the Dataset
-
-`twitter_matching.csv` and `dune_wash_trade_tx.csv` are in the repository. Due to the large size of other datasets, they have been uploaded to Google Drive for convenient downloading. Links for each part of the dataset are provided below:
-
-- Twitter graph
-- Ethereum graph
-- Ethereum graph with Twitter features
-- Wash-trading Addresses detection graph
-
-- [On-chain Ethereum transaction data](https://drive.google.com/file/d/1lY2IC3LeRevSPZCE2U9o8taunGLEV0oY/view?usp=sharing)
-- [DGL graphs for wash-trading Ethereum addresses detection](https://drive.google.com/file/d/14gW0EovXYiXd62XJayGGYRBEeZ3TTU4i/view?usp=sharing)
-- [Validation and Test Graphs with and without Twitter Data](#)
-  - [Training graph with Twitter data](https://drive.google.com/file/d/1Na3SmGzpo8zycQtTCtOQIWh_yJPOcwck/view?usp=sharing)
-  - [Validation graph without Twitter data](https://drive.google.com/file/d/1Qk1unpx0D66STS8GLjQNEsrOqngNQtSy/view?usp=sharing)
-  - [Test graph without Twitter data](https://drive.google.com/file/d/1JgoBdaD2e3wlvZmT-GPEpwEiFwtrPwSB/view?usp=sharing)
-- [Off-chain Twitter data in DGL graph format](https://drive.google.com/file/d/1SNOg3QYoVWFRIl91o0tCeA4dReKwtEa0/view?usp=sharing)
 
 ## Dataset Schema
+We present the original datasets and datasets tailored for use in three distinct tasks. For each dataset, a Google Drive link is provided for easy access and download.
 | Dataset                                         | #Nodes            | #Edges            | Node Features                        | Edge Features                              |
 |------------------------------------------------|------------------|------------------|-------------------------------------|--------------------------------------------|
-| Twitter Graph                                  | <number of nodes>| <number of edges>| twitter_handle, twitter_semantic_features                      | n.a.                            |
-| Ethereum Graph                                 | <number of nodes>| <number of edges>| <node features>                     | from_id, to_id, weight, block_number       |
-| Ethereum Graph with Twitter features           | <number of nodes>| <number of edges>| twitter_features, ethereum_features, combined_features | from_id, to_id, weight, block_number                          |
-| Wash-trading Addresses Detection Graph           | <number of nodes>| <number of edges>| ethereum_features, twitter_semantic_features, twitter_structure_features, ethereum_twitter_combined_features | from_id, to_id, weight, block_number                          |
+| [Twitter Graph](https://drive.google.com/file/d/1n3lFNCsl-6O_ew9tD9HUic-ld4j2QxeX/view?usp=sharing)                                  | 1,103,509|3,768,281| n.a.                      | n.a.                            |
+| Ethereum Graph                                 | 2,610,465| 29,585,858| n.a.                     | from_id, to_id, weight, block_number       |
+| [Ethereum Graph with Twitter features](https://drive.google.com/file/d/1q3KX_b3M2wImFvFMP-15CcPKdVOeuSw-/view?usp=sharing)           |1,709,575 |13,170,869 | twitter_features, ethereum_features, combined_features | from_id, to_id, weight, block_number                          |
+| Wash-trading Addresses Detection Training Graph           | 1,268,607| 8,276,446| ethereum_features, twitter_semantic_features, twitter_structure_features, ethereum_twitter_combined_features | from_id, to_id, weight, block_number                          |
+| Wash-trading Addresses Detection Validation Graph           | 452,930| 1,182,349| ethereum_features, twitter_semantic_features, twitter_structure_features, ethereum_twitter_combined_features | from_id, to_id, weight, block_number                          |
+| Wash-trading Addresses Detection Test Graph           | 711,084| 2,364,700| ethereum_features, twitter_semantic_features, twitter_structure_features, ethereum_twitter_combined_features | from_id, to_id, weight, block_number                          |
+| [Matching Link Prediction Graph](https://drive.google.com/file/d/16_p85_R_PQtDzystILfmj1YTXJSm7-1f/view?usp=sharing)           | 2,833,659| 18,433,366| combined_features | n.a.                          |
 
 
 ## Getting Started
@@ -83,11 +73,13 @@ We list main requirements of this repository below. For full requirements, pleas
 
 We suppose that you have downloaded the datasets to the corresponding task's folders. Then, you can use the following command to load the data in the pkl format.
 
+e.g. For Ethereum link prediction task, you have downloaded Ethereum Graph with Twitter features in the folder. Then you can use the following command to load the dataset
+
 ```
 import dgl
 import pickle as pkl
-with open('G_dgl_with_twitter_features_converted.pkl', 'rb') as f:
-    G_dgl_with_twitter_features_converted = pkl.load(f)
+with open('ethereum_graph_with_twitter_features.pkl', 'rb') as f:
+    ethereum_graph_with_twitter_features = pkl.load(f)
 ```
 
 
@@ -104,7 +96,7 @@ This section details how to using ETGraph to run benchmark baselines. We explain
     ```
 
 ### Wash-trading Address Detection
-1. Navigate to wash_trading_address_detection folder, and download the wash trading graph to this folder. 
+1. Navigate to wash_trading_address_detection folder, and download the wash trading graphs to this folder. 
 2. Each experiment code file is named as `model_wo/with_twitter.py`. `wo` means this experiment does not consider Twitter features. `with` means this experiment considers Twitter features. For example, if you want to run GCN model considering Twitter features, the command is as below:
   
     ``` 
