@@ -94,16 +94,16 @@ def test_model(model, graph, features, pos_indices, neg_indices, transform):
 
 def main():
     data_paths = [
-        '/home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_test_edge_indices.pkl',
-        '/home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_train_edge_indices.pkl',
-        '/home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_validation_edge_indices.pkl',
-        '/home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_test_edge_indices.pkl',
-        '/home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_train_edge_indices.pkl',
-        '/home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_validation_edge_indices.pkl'
+        'positive_test_edge_indices.pkl',
+        'positive_train_edge_indices.pkl',
+        'positive_validation_edge_indices.pkl',
+        'negative_test_edge_indices.pkl',
+        'negative_train_edge_indices.pkl',
+        'negative_validation_edge_indices.pkl'
     ]
     pos_test_indices, pos_train_indices, pos_val_indices, neg_test_indices, neg_train_indices, neg_val_indices = [load_data(path) for path in data_paths]
 
-    graph_data = load_data('/home/qian/HNE/Model/GCN/Ethereum/matching_link/graph_data.pkl')
+    graph_data = load_data('graph_data.pkl')
     graph, features, labels = graph_data['graph'], graph_data['features'], graph_data['labels']
 
     num_epochs = 200

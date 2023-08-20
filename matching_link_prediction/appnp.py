@@ -61,13 +61,13 @@ def generate_edge_embeddings(h, edges):
 
 def main():
     # Load data
-    positive_test_edge_indices = load_data('/home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_test_edge_indices.pkl')
-    positive_train_edge_indices = load_data('/home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_train_edge_indices.pkl')
-    positive_validation_edge_indices = load_data('/home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_validation_edge_indices.pkl')
-    negative_test_edge_indices = load_data('/home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_test_edge_indices.pkl')
-    negative_train_edge_indices = load_data('/home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_train_edge_indices.pkl')
-    negative_validation_edge_indices = load_data('/home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_validation_edge_indices.pkl')
-    G_dgl_training = load_data('/home/qian/HNE/Model/GCN/Ethereum/matching_link/G_dgl_training')
+    positive_test_edge_indices = load_data('positive_test_edge_indices.pkl')
+    positive_train_edge_indices = load_data('positive_train_edge_indices.pkl')
+    positive_validation_edge_indices = load_data('positive_validation_edge_indices.pkl')
+    negative_test_edge_indices = load_data('negative_test_edge_indices.pkl')
+    negative_train_edge_indices = load_data('negative_train_edge_indices.pkl')
+    negative_validation_edge_indices = load_data('negative_validation_edge_indices.pkl')
+    G_dgl_training = load_data('G_dgl_training')
     
     for i in range(5):
         model = APPNP(in_feats=16, hiddens=[128, 128], n_classes=128, activation=F.relu, feat_drop=0.1, edge_drop=0, alpha=0.5, k=3)

@@ -35,24 +35,22 @@ def generate_edge_embeddings(h, edges):
 
     return edge_embs
 
-
-# load /home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_test_edge_indices.pkl, /home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_train_edge_indices.pkl, /home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_validation_edge_indices.pkl, /home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_test_edge_indices.pkl, /home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_train_edge_indices.pkl, /home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_validation_edge_indices.pkl
-with open('/home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_test_edge_indices.pkl', 'rb') as f:
+with open('positive_test_edge_indices.pkl', 'rb') as f:
     positive_test_edge_indices = pkl.load(f)
     
-with open('/home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_train_edge_indices.pkl', 'rb') as f:
+with open('positive_train_edge_indices.pkl', 'rb') as f:
     positive_train_edge_indices = pkl.load(f)
     
-with open('/home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_validation_edge_indices.pkl', 'rb') as f:
+with open('positive_validation_edge_indices.pkl', 'rb') as f:
     positive_validation_edge_indices = pkl.load(f)
     
-with open('/home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_test_edge_indices.pkl', 'rb') as f:
+with open('negative_test_edge_indices.pkl', 'rb') as f:
     negative_test_edge_indices = pkl.load(f)
     
-with open('/home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_train_edge_indices.pkl', 'rb') as f:
+with open('negative_train_edge_indices.pkl', 'rb') as f:
     negative_train_edge_indices = pkl.load(f)
     
-with open('/home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_validation_edge_indices.pkl', 'rb') as f:
+with open('negative_validation_edge_indices.pkl', 'rb') as f:
     negative_validation_edge_indices = pkl.load(f)
 
 hidden_dim = 128
@@ -60,7 +58,7 @@ num_classes = 128
 n_steps = 5
 n_etypes = 1
 
-with open('/home/qian/HNE/Model/GCN/Ethereum/matching_link/G_dgl_training', 'rb') as f:
+with open('G_dgl_training', 'rb') as f:
     G_dgl_training = pkl.load(f)
 
 

@@ -100,29 +100,29 @@ class GATv2(nn.Module):
         return logits
 
 
-with open('/home/qian/HNE/Model/GCN/Ethereum/matching_link/G_dgl_training', 'rb') as f:
+with open('G_dgl_training', 'rb') as f:
     G_dgl_training = pkl.load(f)
 
 # print some features in G_dgl_training
 print(G_dgl_training.ndata['features'][0:5])
 
-# load /home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_test_edge_indices.pkl, /home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_train_edge_indices.pkl, /home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_validation_edge_indices.pkl, /home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_test_edge_indices.pkl, /home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_train_edge_indices.pkl, /home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_validation_edge_indices.pkl
-with open('/home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_test_edge_indices.pkl', 'rb') as f:
+
+with open('positive_test_edge_indices.pkl', 'rb') as f:
     positive_test_edge_indices = pkl.load(f)
     
-with open('/home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_train_edge_indices.pkl', 'rb') as f:
+with open('positive_train_edge_indices.pkl', 'rb') as f:
     positive_train_edge_indices = pkl.load(f)
     
-with open('/home/qian/HNE/Model/GCN/Ethereum/matching_link/positive_validation_edge_indices.pkl', 'rb') as f:
+with open('positive_validation_edge_indices.pkl', 'rb') as f:
     positive_validation_edge_indices = pkl.load(f)
     
-with open('/home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_test_edge_indices.pkl', 'rb') as f:
+with open('negative_test_edge_indices.pkl', 'rb') as f:
     negative_test_edge_indices = pkl.load(f)
     
-with open('/home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_train_edge_indices.pkl', 'rb') as f:
+with open('negative_train_edge_indices.pkl', 'rb') as f:
     negative_train_edge_indices = pkl.load(f)
     
-with open('/home/qian/HNE/Model/GCN/Ethereum/matching_link/negative_validation_edge_indices.pkl', 'rb') as f:
+with open('negative_validation_edge_indices.pkl', 'rb') as f:
     negative_validation_edge_indices = pkl.load(f)
 
 
@@ -132,9 +132,9 @@ in_feats = 16
 # Define the model hyperparameters
 num_layers = 3
 in_dim = in_feats
-num_hidden = 32
+num_hidden = 128
 num_classes = 8
-heads = [4, 4, 4]
+heads = [3, 3, 3]
 activation = F.elu
 feat_drop = 0
 attn_drop = 0
