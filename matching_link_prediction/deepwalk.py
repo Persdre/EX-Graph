@@ -25,7 +25,7 @@ def load_data():
     with open('negative_validation_edge_indices.pkl', 'rb') as f:
         negative_validation_edge_indices = pkl.load(f)
     
-    with open('node2vec_embeddings_for_matching_lp_1.pkl', 'rb') as f:
+    with open('deepwalk_embeddings_for_matching_lp_1.pkl', 'rb') as f:
         embeddings = pkl.load(f)
     
     return positive_test_edge_indices, positive_train_edge_indices, positive_validation_edge_indices, negative_test_edge_indices, negative_train_edge_indices, negative_validation_edge_indices, embeddings
