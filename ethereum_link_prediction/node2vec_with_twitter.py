@@ -26,7 +26,7 @@ def main():
         G_node2vec_reorder = pickle.load(f)
         
     # read G_dgl graph for later get the twitter converted features
-    with open('G_dgl_with_twitter_features_converted.pkl', 'rb') as f:
+    with open('ethereum_with_twitter_features.pkl', 'rb') as f:
         G_dgl = pickle.load(f)
         
 

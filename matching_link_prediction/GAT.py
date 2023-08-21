@@ -10,7 +10,7 @@ import pickle as pkl
 import copy
 
 class GATModel(nn.Module):
-    def __init__(self, in_dim, hidden_dim, out_dim, num_heads, dropout_rate=0):
+    def __init__(self, in_dim, hidden_dim, out_dim, num_heads, dropout_rate=0.1):
         super().__init__()
         self.conv1 = GATConv(in_dim, hidden_dim, num_heads=num_heads)
         self.dropout1 = nn.Dropout(dropout_rate)
@@ -104,12 +104,12 @@ def main():
     pos_test_indices, pos_train_indices, pos_val_indices, neg_test_indices, neg_train_indices, neg_val_indices = [load_data(path) for path in data_paths]
 
     graph_data = load_data('graph_data.pkl')
-    graph, features, labels = graph_data['graph'], graph_data['features'], graph_data['labels']
+    graph, features, labels = graph_data['graph'], graph_data['combined_features'], graph_data['labels']
 
     num_epochs = 200
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-    model = GATModel(features.shape[1], 128, 128, 8).to(device)
+    model = GATModel(features.shape[1], 128, 128, 3).to(device)
     features = features.to(device)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)

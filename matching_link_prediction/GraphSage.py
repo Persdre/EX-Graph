@@ -51,22 +51,22 @@ def load_data():
     with open('negative_validation_edge_indices.pkl', 'rb') as f:
         negative_validation_edge_indices = pkl.load(f)
 
-    with open('G_dgl_training', 'rb') as f:
-        G_dgl_training = pkl.load(f)
+    with open('matching_link_prediction_graph.pkl', 'rb') as f:
+        matching_link_prediction_graph.pkl = pkl.load(f)
 
     return (positive_test_edge_indices, positive_train_edge_indices,
             positive_validation_edge_indices, negative_test_edge_indices,
             negative_train_edge_indices, negative_validation_edge_indices,
-            G_dgl_training)
+            matching_link_prediction_graph.pkl)
 
 def main():
     # Load data
     (positive_test_edge_indices, positive_train_edge_indices,
      positive_validation_edge_indices, negative_test_edge_indices,
      negative_train_edge_indices, negative_validation_edge_indices,
-     G_dgl_training) = load_data()
+     matching_link_prediction_graph.pkl) = load_data()
 
-    print(G_dgl_training.ndata['features'][0:5])
+    print(matching_link_prediction_graph.pkl.ndata['combined_features'][0:5])
 
     # Training loop
     for i in range(5):
@@ -87,7 +87,7 @@ def main():
         for epoch in range(num_epochs):
             model.train()
             # forward pass
-            logits = model(G_dgl_training, G_dgl_training.ndata['features'].float())
+            logits = model(matching_link_prediction_graph.pkl, matching_link_prediction_graph.pkl.ndata['combined_features'].float())
             
             # generate edge embeddings
             pos_train_edge_embs = generate_edge_embeddings(logits, positive_train_edge_indices)
@@ -114,7 +114,7 @@ def main():
             
             with torch.no_grad():
                 # repeat the same process as above for validation samples
-                logits = model(G_dgl_training, G_dgl_training.ndata['features'].float())
+                logits = model(matching_link_prediction_graph.pkl, matching_link_prediction_graph.pkl.ndata['combined_features'].float())
                 pos_val_edge_embs = generate_edge_embeddings(logits, positive_validation_edge_indices)
                 neg_val_edge_embs = generate_edge_embeddings(logits, negative_validation_edge_indices)
                 val_edge_embs = torch.cat([pos_val_edge_embs, neg_val_edge_embs], dim=0)
@@ -143,7 +143,7 @@ def main():
 
         with torch.no_grad():
             # generate the embeddings using the best model
-            logits = best_model(G_dgl_training, G_dgl_training.ndata['features'].float())
+            logits = best_model(matching_link_prediction_graph.pkl, matching_link_prediction_graph.pkl.ndata['combined_features'].float())
 
             # generate edge embeddings for the test samples
             pos_test_edge_embs = generate_edge_embeddings(logits, positive_test_edge_indices)

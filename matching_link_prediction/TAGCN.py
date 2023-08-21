@@ -39,7 +39,7 @@ def generate_edge_embeddings(h, edges):
     return torch.cat([src_embed, dst_embed], dim=1)
 
 def main():
-    G_dgl_training = load_data('G_dgl_training')
+    matching_link_prediction_graph.pkl = load_data('matching_link_prediction_graph.pkl')
 
     positive_test_edge_indices = load_data('positive_test_edge_indices.pkl')
     positive_train_edge_indices = load_data('positive_train_edge_indices.pkl')
@@ -55,7 +55,7 @@ def main():
     )
 
     for _ in range(5):
-        model = TAGCN(G_dgl_training, in_feats=16, n_hidden=128, n_classes=128, n_layers=1, activation=torch.nn.functional.relu, dropout=0.1)
+        model = TAGCN(matching_link_prediction_graph.pkl, in_feats=16, n_hidden=128, n_classes=128, n_layers=1, activation=torch.nn.functional.relu, dropout=0.1)
         optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
         criterion = nn.BCEWithLogitsLoss()
         best_val_loss = float('inf')
@@ -67,7 +67,7 @@ def main():
         for epoch in range(num_epochs):
             # Training phase
             model.train()
-            logits = model(G_dgl_training.ndata['features'].float())
+            logits = model(matching_link_prediction_graph.pkl.ndata['combined_features'].float())
             pos_train_edge_embs = generate_edge_embeddings(logits, positive_train_edge_indices)
             neg_train_edge_embs = generate_edge_embeddings(logits, negative_train_edge_indices)
             train_edge_embs = torch.cat([pos_train_edge_embs, neg_train_edge_embs], dim=0)
@@ -81,7 +81,7 @@ def main():
             # Validation phase
             model.eval()
             with torch.no_grad():
-                logits = model(G_dgl_training.ndata['features'].float())
+                logits = model(matching_link_prediction_graph.pkl.ndata['combined_features'].float())
                 pos_val_edge_embs = generate_edge_embeddings(logits, positive_validation_edge_indices)
                 neg_val_edge_embs = generate_edge_embeddings(logits, negative_validation_edge_indices)
                 val_edge_embs = torch.cat([pos_val_edge_embs, neg_val_edge_embs], dim=0)
@@ -101,7 +101,7 @@ def main():
         # Testing phase
         best_model.eval()
         with torch.no_grad():
-            logits = best_model(G_dgl_training.ndata['features'].float())
+            logits = best_model(matching_link_prediction_graph.pkl.ndata['combined_features'].float())
             pos_test_edge_embs = generate_edge_embeddings(logits, positive_test_edge_indices)
             neg_test_edge_embs = generate_edge_embeddings(logits, negative_test_edge_indices)
             test_edge_embs = torch.cat([pos_test_edge_embs, neg_test_edge_embs], dim=0)

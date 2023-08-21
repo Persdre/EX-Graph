@@ -25,7 +25,7 @@ def main():
         G_node2vec_reorder = pickle.load(f)
         
     # read G_dgl graph for later get the twitter converted features
-    with open('G_dgl_with_twitter_features_converted.pkl', 'rb') as f:
+    with open('ethereum_with_twitter_features.pkl', 'rb') as f:
         G_dgl = pickle.load(f) 
 
     mapping = dict(zip(G_node2vec.nodes, G_node2vec_reorder.nodes))
@@ -64,8 +64,8 @@ def main():
                 node2_rw = embeddings[node2].detach().cpu().numpy()
                
                 # # features from the graph structure
-                # node1_structure = G_dgl.nodes[node1].data['normalized_log_features'].detach().cpu().numpy().flatten()
-                # node2_structure = G_dgl.nodes[node2].data['normalized_log_features'].detach().cpu().numpy().flatten()
+                # node1_structure = G_dgl.nodes[node1].data['ethereum_features'].detach().cpu().numpy().flatten()
+                # node2_structure = G_dgl.nodes[node2].data['ethereum_features'].detach().cpu().numpy().flatten()
 
                 # features from the twitter
                 node1_twitter = G_dgl.nodes[node1].data['converted_features'].detach().cpu().numpy().flatten()
