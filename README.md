@@ -97,7 +97,7 @@ This section details how to using ETGraph to run benchmark baselines. We explain
     python clusterGCN_with_twitter.py
     ```
 
-### Wash-trading Address Detection
+### Wash-trading Addresses Detection
 1. Navigate to wash_trading_address_detection folder, and download the wash trading graphs to this folder. 
 2. Each experiment code file is named as `model_wo/with_twitter.py`. `wo` means this experiment does not consider Twitter features. `with` means this experiment considers Twitter features. For example, if you want to run GCN model considering Twitter features, the command is as below:
   
