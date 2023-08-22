@@ -105,7 +105,7 @@ class GATv2(nn.Module):
         return logits
 
 import pickle as pkl
-# read G_dgl_with_twitter_converted.pkl
+# read ethereum_with_twitter_features.pkl
 with open('ethereum_with_twitter_features.pkl', 'rb') as f:
     G_dgl_with_twitter_features_converted = pkl.load(f)
 
