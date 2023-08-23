@@ -1,7 +1,7 @@
 # ETGraph
-ETGraph is a rich dataset containing Ethereum transaction data and Twitter data. With a focus on bridging the gap between anonymous Ethereum activities and identifiable Twitter information, it's specifically designed to facilitate various tasks including Ethereum link prediction, wash-trading addressese detection, and matching link prediction between Ethereum addresses and Twitter accounts. By integrating these two different dimensions, ETGraph provides a comprehensive resource for researchers and analysts to explore the complex relationships within the Ethereum landscape.
+ETGraph is a rich dataset containing Ethereum transaction data and Twitter data. With a focus on bridging the gap between anonymous Ethereum activities and Twitter information, it's specifically designed to facilitate various tasks including Ethereum link prediction, wash-trading addresses detection, and matching link prediction between Ethereum addresses and Twitter accounts. By integrating these two different dimensions, ETGraph provides an on-chain and off-chain resource for researchers and analysts to explore the complex dynamics of Ethereum.
 
-Also, we deploy our ETGraph dataset to a website, where you can upload your results to the leaderboard: [ETGraph](https://etgraph.deno.dev/)
+Additionally, we've made the ETGraph dataset accessible through a dedicated website. Here, you're invited to upload and compare your experiment results on our leaderboard: [ETGraph](https://etgraph.deno.dev/)
 
 ## Table of Contents
 - [Dataset Overview](#dataset-overview)
