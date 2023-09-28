@@ -94,7 +94,7 @@ with open('ethereum_graph_with_twitter_features.pkl', 'rb') as f:
 This section details how to using ETGraph to run benchmark baselines. We explain experiments Ethereum link prediction, wash-trading addresses detection, matching link prediction one by one.
 
 ### Ethereum Link Prediction
-1. Navigate to ethereum_link_prediction folder, and download the Ethereum graph with Twitter features to this folder. 
+1. Navigate to ethereum_link_prediction folder, and download [Ethereum Graph with Twitter features](https://drive.google.com/file/d/1q3KX_b3M2wImFvFMP-15CcPKdVOeuSw-/view?usp=sharing) to this folder. 
 2. Each experiment code file is named as `model_wo/with_twitter.py`. `wo` means this experiment does not consider Twitter features. `with` means this experiment considers Twitter features. For example, if you want to run clusterGCN model considering Twitter features in Ethereum link prediction, the command is as below:
 
     ``` 
@@ -102,7 +102,7 @@ This section details how to using ETGraph to run benchmark baselines. We explain
     ```
 
 ### Wash-trading Addresses Detection
-1. Navigate to wash_trading_address_detection folder, and download the wash trading graphs to this folder. 
+1. Navigate to wash_trading_address_detection folder, and download the wash trading graphs: [Wash-trading Addresses Detection Training Graph](https://drive.google.com/file/d/1k2pkqlvA1wcamvgFSyZvmSSz3PRsG8Ie/view?usp=sharing), [Wash-trading Addresses Detection Validation Graph](https://drive.google.com/file/d/1CEIA9gzX9zjBshhWjNfm_Zx6g9wMybzb/view?usp=sharing), [Wash-trading Addresses Detection Test Graph](https://drive.google.com/file/d/1aHpUtOu4OktcffnWi_IHLBB0miGlTYuO/view?usp=sharing) to this folder. 
 2. Each experiment code file is named as `model_wo/with_twitter.py`. `wo` means this experiment does not consider Twitter features. `with` means this experiment considers Twitter features. For example, if you want to run GCN model considering Twitter features, the command is as below:
   
     ``` 
@@ -110,7 +110,7 @@ This section details how to using ETGraph to run benchmark baselines. We explain
     ```
 
 ### Matching Link Prediction
-1. Navigate to matching_link_prediction folder, and download the matching link graph to this folder. 
+1. Navigate to matching_link_prediction folder, and download [Matching Link Prediction Graph](https://drive.google.com/file/d/16_p85_R_PQtDzystILfmj1YTXJSm7-1f/view?usp=sharing) to this folder. 
 2. Each experiment code file is named as `model.py`. For example, if you want to run GCN model on this matching link prediction, the command is as below:
    
     ``` 
