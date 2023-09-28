@@ -3,7 +3,7 @@ ETGraph is a rich dataset containing Ethereum transaction data and Twitter data.
 
 ## Overview
 <p align='center'>
-  <img width='100%' src='https://github.com/Persdre/ETGraph/blob/main/overview.pdf' />
+  <img width='100%' src='https://github.com/Persdre/ETGraph/blob/main/overview.png' />
 </p>
 
 Additionally, we've made the ETGraph dataset accessible through a dedicated website [ETGraph](https://etgraph.deno.dev/). Here, you are welcomed to upload and compare your experiment results on our leaderboard.
