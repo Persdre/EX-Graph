@@ -7,6 +7,7 @@ EX-Graph is a rich dataset containing Ethereum transaction data and X data. With
 </p>
 
 Additionally, we've made the EX-Graph dataset accessible through a dedicated website [ETGraph](https://etgraph.deno.dev/). Here, you are welcomed to upload and compare your experiment results on our leaderboard.
+
 ## Table of Contents
 - [Dataset Overview](#dataset-overview)
 - [Dataset Schema](#dataset-schema)
@@ -19,6 +20,7 @@ Additionally, we've made the EX-Graph dataset accessible through a dedicated web
   - [Wash Trading Address Detection](#wash-trading-address-detection)
   - [Matching Link Prediction](#matching-link-prediction)
 - [License](#license)
+- [Acknowledgement](#acknowledgement)
 
 ## Dataset Overview
 ETGraph dataset consists of several components:
@@ -119,3 +121,8 @@ This section details how to using ETGraph to run benchmark baselines. We explain
 
 ## License
 This dataset is under license CC BY-NC-SA.
+
+
+## Acknowledgement
+We thank [Ruochen Li](https://github.com/lirc572) for building the website and providing valuable suggestions for this repository.
+
