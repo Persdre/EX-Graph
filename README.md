@@ -6,7 +6,7 @@ EX-Graph is a rich dataset containing Ethereum transaction data and X data. With
   <img width='100%' src='https://github.com/Persdre/ETGraph/blob/main/overview.png' />
 </p>
 
-Additionally, we've made the EX-Graph dataset accessible through a dedicated website [ETGraph](https://etgraph.deno.dev/). Here, you are welcomed to upload and compare your experiment results on our leaderboard.
+Additionally, we've made the EX-Graph dataset accessible through a dedicated website [EX-Graph](https://etgraph.deno.dev/). Here, you are welcomed to upload and compare your experiment results on our leaderboard.
 
 ## Table of Contents
 - [Dataset Overview](#dataset-overview)
@@ -27,7 +27,7 @@ ETGraph dataset consists of several components:
 
 - `X Graph`: X accounts and their following relationships.
 - `Ethereum Graph`: Ethereum addresses and their transaction records.
-- `Ethereum Graph with Twitter features`: A DGL graph contains Ethereum addresses and their transaction records, as well as Ethereum addresses features got from both Ethereum and matched-X accounts, it is used for Ethereum link prediction task.
+- `Ethereum Graph with X features`: A DGL graph contains Ethereum addresses and their transaction records, as well as Ethereum addresses features got from both Ethereum and matched-X accounts, it is used for Ethereum link prediction task.
 - `Wash-trading Addresses Detection Training Graph`: Training graph used for wash-trading addresses detection task.
 - `Wash-trading Addresses Detection Validation Graph`: Validation graph used for wash-trading addresses detection task.
 - `Wash-trading Addresses Detection Test Graph`: Test graph used for wash-trading addresses detection task.
@@ -35,7 +35,7 @@ ETGraph dataset consists of several components:
 - `ethereum_link_prediction`: Folder contains models to run Ethereum link prediction experiment and train, validation, test edge indices pickle files.
 - `wash_trading_address_detection`: Folder contains code of models to run wash trading address detection experiment.
 - `matching_link_prediction`: Folder contains models to run matching link prediction experiment and train, validation, test edge indices pickle files.
-- `X_matching.csv`: Twitter accounts and the Ethereum addresses matched with them. We did anonymization operations so that you can see the twitter numerical id matching with Ethereum addresses without leaking any personal information.
+- `X_matching.csv`: X accounts and the Ethereum addresses matched with them. We did anonymization operations so that you can see the X numerical id matching with Ethereum addresses without leaking any personal information.
 - `dune_wash_trade_tx.csv`: Wash-trading transactions downloaded from Dune.
 
 
@@ -45,10 +45,10 @@ We present the original datasets and datasets tailored for use in three distinct
 |------------------------------------------------|------------------|------------------|-------------------------------------|--------------------------------------------|
 | [X Graph](https://drive.google.com/file/d/1n3lFNCsl-6O_ew9tD9HUic-ld4j2QxeX/view?usp=sharing)                                  | 1,103,509|3,768,281| n.a.                      | n.a.                            |
 | [Ethereum Graph](https://drive.google.com/file/d/1VWUGTUniv7-uDISXvJcMLE4OMCtQFPn6/view?usp=sharing)                                 | 2,610,465| 29,585,858| n.a.                     | from_address, to_address, weight, block_number       |
-| [Ethereum Graph with Twitter features](https://drive.google.com/file/d/1q3KX_b3M2wImFvFMP-15CcPKdVOeuSw-/view?usp=sharing)           |1,709,575 |13,170,869 | twitter_features, ethereum_features, ethereum_twitter_combined_features | from_address, to_address, weight, block_number                          |
-| [Wash-trading Addresses Detection Training Graph](https://drive.google.com/file/d/1k2pkqlvA1wcamvgFSyZvmSSz3PRsG8Ie/view?usp=sharing)           | 1,268,607| 8,276,446| ethereum_features, twitter_semantic_features, twitter_structure_features, ethereum_twitter_combined_features, wash_trading_label | n.a.                          |
-| [Wash-trading Addresses Detection Validation Graph](https://drive.google.com/file/d/1CEIA9gzX9zjBshhWjNfm_Zx6g9wMybzb/view?usp=sharing)           | 452,930| 1,182,349| ethereum_features, twitter_semantic_features, twitter_structure_features, ethereum_twitter_combined_features, wash_trading_label | n.a.                         |
-| [Wash-trading Addresses Detection Test Graph](https://drive.google.com/file/d/1aHpUtOu4OktcffnWi_IHLBB0miGlTYuO/view?usp=sharing)           | 711,084| 2,364,700| ethereum_features, twitter_semantic_features, twitter_structure_features, ethereum_twitter_combined_features, wash_trading_label | n.a.                          |
+| [Ethereum Graph with X features](https://drive.google.com/file/d/1q3KX_b3M2wImFvFMP-15CcPKdVOeuSw-/view?usp=sharing)           |1,709,575 |13,170,869 | X_features, ethereum_features, ethereum_X_combined_features | from_address, to_address, weight, block_number                          |
+| [Wash-trading Addresses Detection Training Graph](https://drive.google.com/file/d/1k2pkqlvA1wcamvgFSyZvmSSz3PRsG8Ie/view?usp=sharing)           | 1,268,607| 8,276,446| ethereum_features, X_semantic_features, X_structure_features, ethereum_X_combined_features, wash_trading_label | n.a.                          |
+| [Wash-trading Addresses Detection Validation Graph](https://drive.google.com/file/d/1CEIA9gzX9zjBshhWjNfm_Zx6g9wMybzb/view?usp=sharing)           | 452,930| 1,182,349| ethereum_features, X_semantic_features, X_structure_features, ethereum_X_combined_features, wash_trading_label | n.a.                         |
+| [Wash-trading Addresses Detection Test Graph](https://drive.google.com/file/d/1aHpUtOu4OktcffnWi_IHLBB0miGlTYuO/view?usp=sharing)           | 711,084| 2,364,700| ethereum_features, X_semantic_features, X_structure_features, ethereum_X_combined_features, wash_trading_label | n.a.                          |
 | [Matching Link Prediction Graph](https://drive.google.com/file/d/16_p85_R_PQtDzystILfmj1YTXJSm7-1f/view?usp=sharing)           | 2,833,659| 18,433,366| combined_features | n.a.                          |
 
 
@@ -81,13 +81,13 @@ We list main requirements of this repository below. For full requirements, pleas
 
 We suppose that you have downloaded the datasets to the corresponding task's folders. Then, you can use the following command to load the data in the pkl format.
 
-e.g. For Ethereum link prediction task, you have downloaded Ethereum Graph with Twitter features in the folder. Then you can use the following command to load the dataset
+e.g. For Ethereum link prediction task, you have downloaded Ethereum Graph with X features in the folder. Then you can use the following command to load the dataset
 
 ```
 import dgl
 import pickle as pkl
-with open('ethereum_graph_with_twitter_features.pkl', 'rb') as f:
-    ethereum_graph_with_twitter_features = pkl.load(f)
+with open('ethereum_graph_with_X_features.pkl', 'rb') as f:
+    ethereum_graph_with_X_features = pkl.load(f)
 ```
 
 
@@ -96,19 +96,19 @@ with open('ethereum_graph_with_twitter_features.pkl', 'rb') as f:
 This section details how to using ETGraph to run benchmark baselines. We explain experiments Ethereum link prediction, wash-trading addresses detection, matching link prediction one by one.
 
 ### Ethereum Link Prediction
-1. Navigate to ethereum_link_prediction folder, and download [Ethereum Graph with Twitter features](https://drive.google.com/file/d/1q3KX_b3M2wImFvFMP-15CcPKdVOeuSw-/view?usp=sharing) to this folder. 
-2. Each experiment code file is named as `model_wo/with_twitter.py`. `wo` means this experiment does not consider Twitter features. `with` means this experiment considers Twitter features. For example, if you want to run clusterGCN model considering Twitter features in Ethereum link prediction, the command is as below:
+1. Navigate to ethereum_link_prediction folder, and download [Ethereum Graph with X features](https://drive.google.com/file/d/1q3KX_b3M2wImFvFMP-15CcPKdVOeuSw-/view?usp=sharing) to this folder. 
+2. Each experiment code file is named as `model_wo/with_X.py`. `wo` means this experiment does not consider X features. `with` means this experiment considers X features. For example, if you want to run clusterGCN model considering X features in Ethereum link prediction, the command is as below:
 
     ``` 
-    python clusterGCN_with_twitter.py
+    python clusterGCN_with_X.py
     ```
 
 ### Wash-trading Addresses Detection
 1. Navigate to wash_trading_address_detection folder, and download the wash trading graphs: [Wash-trading Addresses Detection Training Graph](https://drive.google.com/file/d/1k2pkqlvA1wcamvgFSyZvmSSz3PRsG8Ie/view?usp=sharing), [Wash-trading Addresses Detection Validation Graph](https://drive.google.com/file/d/1CEIA9gzX9zjBshhWjNfm_Zx6g9wMybzb/view?usp=sharing), [Wash-trading Addresses Detection Test Graph](https://drive.google.com/file/d/1aHpUtOu4OktcffnWi_IHLBB0miGlTYuO/view?usp=sharing) to this folder. 
-2. Each experiment code file is named as `model_wo/with_twitter.py`. `wo` means this experiment does not consider Twitter features. `with` means this experiment considers Twitter features. For example, if you want to run GCN model considering Twitter features, the command is as below:
+2. Each experiment code file is named as `model_wo/with_X.py`. `wo` means this experiment does not consider X features. `with` means this experiment considers X features. For example, if you want to run GCN model considering X features, the command is as below:
   
     ``` 
-    python GCN_with_twitter.py
+    python GCN_with_X.py
     ```
 
 ### Matching Link Prediction
