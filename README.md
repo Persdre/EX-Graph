@@ -1,5 +1,5 @@
 # EX-Graph
-EX-Graph is a rich dataset containing Ethereum transaction data and X data. With a focus on bridging the gap between anonymous Ethereum activities and X information, it's specifically designed to facilitate various tasks including Ethereum link prediction, wash-trading addresses detection, and matching link prediction between Ethereum addresses and X accounts. By integrating these two different dimensions, EX-Graph provides an on-chain and off-chain resource for researchers and analysts to explore the complex dynamics of Ethereum.
+EX-Graph is a rich dataset containing Ethereum transaction data and X data. With a focus on bridging the gap between anonymous Ethereum activities and the leading social media X's information, it's specifically designed to facilitate various tasks including Ethereum link prediction, wash-trading addresses detection, and matching link prediction between Ethereum addresses and X accounts. By integrating these two different dimensions, EX-Graph provides an on-chain and off-chain resource for researchers and analysts to explore the complex dynamics of Ethereum.
 
 ## Overview
 <p align='center'>
