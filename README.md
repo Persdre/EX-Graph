@@ -6,7 +6,7 @@ EX-Graph is a rich dataset containing Ethereum transaction data and X data. With
   <img width='100%' src='https://github.com/Persdre/EX-Graph/blob/main/exgraph_overview.pdf' />
 </p>
 
-Additionally, we've made the EX-Graph dataset accessible through a dedicated website [EX-Graph](https://etgraph.deno.dev/). Here, you are welcomed to upload and compare your experiment results on our leaderboard.
+Additionally, we've made the EX-Graph dataset accessible through a dedicated website [EX-Graph](https://EX-Graph.deno.dev/). Here, you are welcomed to upload and compare your experiment results on our leaderboard.
 
 ## Table of Contents
 - [Dataset Overview](#dataset-overview)
@@ -15,7 +15,7 @@ Additionally, we've made the EX-Graph dataset accessible through a dedicated web
   - [Installation](#installation)
   - [Requirements](#requirements)
   - [Dataset Loading](#dataset-loading)
-- [Using ETGraph](#using-etgraph)
+- [Using EX-Graph](#using-EX-Graph)
   - [Ethereum Link Prediction](#ethereum-link-prediction)
   - [Wash Trading Address Detection](#wash-trading-address-detection)
   - [Matching Link Prediction](#matching-link-prediction)
@@ -23,7 +23,7 @@ Additionally, we've made the EX-Graph dataset accessible through a dedicated web
 - [Acknowledgement](#acknowledgement)
 
 ## Dataset Overview
-ETGraph dataset consists of several components:
+EX-Graph dataset consists of several components:
 
 - `X Graph`: X accounts and their following relationships.
 - `Ethereum Graph`: Ethereum addresses and their transaction records.
@@ -93,7 +93,7 @@ with open('ethereum_graph_with_X_features.pkl', 'rb') as f:
 
 ## Using EX-Graph
 
-This section details how to using ETGraph to run benchmark baselines. We explain experiments Ethereum link prediction, wash-trading addresses detection, matching link prediction one by one.
+This section details how to using EX-Graph to run benchmark baselines. We explain experiments Ethereum link prediction, wash-trading addresses detection, matching link prediction one by one.
 
 ### Ethereum Link Prediction
 1. Navigate to ethereum_link_prediction folder, and download [Ethereum Graph with X features](https://drive.google.com/file/d/1q3KX_b3M2wImFvFMP-15CcPKdVOeuSw-/view?usp=sharing) to this folder. 
