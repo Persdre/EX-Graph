@@ -3,7 +3,7 @@ EX-Graph is a rich dataset containing Ethereum transaction data and X data. With
 
 ## Overview
 <p align='center'>
-  <img width='100%' src='https://github.com/Persdre/ETGraph/blob/main/overview.png' />
+  <img width='100%' src='https://github.com/Persdre/EX-Graph/blob/main/exgraph_overview.pdf' />
 </p>
 
 Additionally, we've made the EX-Graph dataset accessible through a dedicated website [EX-Graph](https://etgraph.deno.dev/). Here, you are welcomed to upload and compare your experiment results on our leaderboard.
