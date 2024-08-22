@@ -2,9 +2,8 @@
 EX-Graph is a rich dataset containing Ethereum transaction data and X data. With a focus on bridging the gap between anonymous Ethereum activities and the leading social media X's information, it's specifically designed to facilitate various tasks including Ethereum link prediction, wash-trading addresses detection, and matching link prediction between Ethereum addresses and X accounts. By integrating these two different dimensions, EX-Graph provides an on-chain and off-chain resource for researchers and analysts to explore the complex dynamics of Ethereum.
 
 ## Overview
-<p align='center'>
-  <img width='100%' src='https://github.com/Persdre/EX-Graph/blob/main/exgraph_overview.pdf' />
-</p>
+
+<img src="ex_graph_overview.png">
 
 Additionally, we've made the EX-Graph dataset accessible through a dedicated website [EX-Graph](https://EX-Graph.deno.dev/). Here, you are welcomed to upload and compare your experiment results on our leaderboard.
 
@@ -125,4 +124,9 @@ This dataset is under license CC BY-NC-SA.
 
 ## Acknowledgement
 We thank [Ruochen Li](https://github.com/lirc572) for building the website and providing valuable suggestions for this repository.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Persdre/EX-Graph&type=Date)](https://star-history.com/#Persdre/EX-Graph&Date)
+
 
