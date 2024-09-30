@@ -125,6 +125,17 @@ This dataset is under license CC BY-NC-SA.
 ## Acknowledgement
 We thank [Ruochen Li](https://github.com/lirc572) for building the website and providing valuable suggestions for this repository.
 
+## Citation
+If you find this repository useful, please cite our paper:
+
+```
+@inproceedings{wangex,
+  title={EX-Graph: A Pioneering Dataset Bridging Ethereum and X},
+  author={Wang, Qian and Zhang, Zhen and Liu, Zemin and Lu, Shengliang and Luo, Bingqiao and He, Bingsheng},
+  booktitle={The Twelfth International Conference on Learning Representations}
+}
+```
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Persdre/EX-Graph&type=Date)](https://star-history.com/#Persdre/EX-Graph&Date)
